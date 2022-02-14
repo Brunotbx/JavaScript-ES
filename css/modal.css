@@ -1,0 +1,84 @@
+
+.modal-container {
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .5) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-container.ativo{
+    display: flex;
+}
+
+.modal {
+    background: #fafafa;
+    padding: 40px;
+    border: 6px solid #341d5c;
+    border-radius: 3px;
+    box-shadow: 0 0 0 7px #fafafa;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.ativo .modal {
+    animation: modal .5s forwards;
+}
+
+.fechar {
+    height: 40px;
+    width: 40px;
+    background: #341d5c;
+    color: #fafafa;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    border: 4px solid #fafafa;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0 #341d5c;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0 .5rem 0;
+}
+
+.modal input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px;
+}
+
+.modal button[type="submit"] {
+    margin-top: 20px;
+    padding: 5px 15px;
+    background: transparent;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.modal button[type="submit"]:hover {
+    transition: 1s;
+    background: #341d5cbd;
+    color: #fafafa;
+}
