@@ -1,10 +1,10 @@
 //Function to show element chosed in screen
 export default class TabNav {
-    constructor(menu, content){
-      this.tabMenu = document.querySelectorAll(menu);
-      this.tabContent = document.querySelectorAll(content);
-      this.activeClass = 'ativo'
-    }
+  constructor(menu, content) {
+    this.tabMenu = document.querySelectorAll(menu);
+    this.tabContent = document.querySelectorAll(content);
+    this.activeClass = "ativo";
+  }
 
   activeTab(index) {
     this.tabContent.forEach((c) => {
@@ -24,9 +24,10 @@ export default class TabNav {
   }
   // inicia os eventos
   init() {
-    if(this.tabMenu.length && this.tabContent.length){
+    if (this.tabMenu.length && this.tabContent.length) {
       this.activeTab(0);
       this.addTabNavEvent();
     }
+    return this;
   }
 }
