@@ -1,8 +1,8 @@
 //Function to create accordions animations
 export default class Accordion {
-  constructor(list){
+  constructor(list) {
     this.accordionList = document.querySelectorAll(list);
-    this.ativo = 'ativo';
+    this.ativo = "ativo";
   }
 
   toggleAccordion(item) {
@@ -19,9 +19,10 @@ export default class Accordion {
 
   // inicia a função
   init() {
-    if (this.accordionList.length){
-      this.toggleAccordion(this.accordionList[0])
+    if (this.accordionList.length) {
+      this.toggleAccordion(this.accordionList[0]);
       this.addAccordionEvent();
     }
+    return this;
   }
 }
