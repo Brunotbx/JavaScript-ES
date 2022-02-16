@@ -1,9 +1,10 @@
 //Fuction to animate the elements in browser during scroll.
+import debounce from "./debounce.js";
 export default class ScrollAnima {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.windowBreak = window.innerHeight * 0.6;
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this));
   }
 
   getDistance() {
