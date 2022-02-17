@@ -8,9 +8,9 @@ import btcFetch from './modules/btcFetch.js';
 import ScrollAnima from './modules/scrollAnima.js';
 import DropdownMenu from './modules/dropdown.js';
 import MenuMobile from './modules/menuMobile.js';
+import Funcionamento from './modules/funcionamento.js';
 
-import initFuncionamento from './modules/funcionamento.js';
-
+// Classes instantiate
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
@@ -32,8 +32,10 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]', 'click', 'touchstart');
 menuMobile.init();
 
+const funcionamento = new Funcionamento("[data-semana]", "aberto");
+funcionamento.init();
+console.log(funcionamento.init());
+
 // Function callers
 fetchAnimais("..//animaisApi.json",".numeros-grid")
 btcFetch("https://blockchain.info/ticker", ".btc-preco");
-
-initFuncionamento();
