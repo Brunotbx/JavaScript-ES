@@ -11,7 +11,6 @@
   <li>Html5</li>
   <li>CSS3</li>
   <li>JavaScript ES6</li>
-  <li>Json Server - API Rest</li>
 </ul>
 
 <p>O projeto apesar de simples aborda diversos pontos alinhados as boas praáticas de mercado. Na maioria do projeto utilizei o conceito de orientação a objetos, passando também por conceitos de estruturação e otimização de código.</p>
